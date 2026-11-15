@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>דריה אליאס | אימון אישי</title>
+<meta name="description" content="אימון אישי בתקופות של שינוי – בקריירה, בחיים ובכל מה שביניהם. ליווי אחד על אחד, אונליין, מכל מקום בעולם.">
+
+<!--
+  ===== הערות לפני פרסום =====
+  1. התמונות darya.jpg ו-compass.jpg צריכות להיות באותה תיקייה כמו index.html.
+  2. כל כפתורי הוואטסאפ מובילים ל-972542801725 עם הודעה מוכנה מראש.
+  3. אין בעמוד המלצות – כשיהיו המלצות אמיתיות, אפשר להוסיף סעיף לפני "בואו נתחיל בשיחה".
+  ============================
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --paper:#FAF6F0;
+    --cream:#F3ECE2;
+    --sand:#E7D9C2;
+    --sand-deep:#C9A876;
+    --ocean:#5C7A8A;
+    --ocean-deep:#3B5563;
+    --ocean-pale:#C3D3D8;
+    --clay:#B97A56;
+    --ink:#2B2620;
+    --ink-soft:#655E55;
+    --ink-faint:#8C8378;
+    --white:#FFFFFF;
+    --wa:#25D366;
+    --shadow: 0 30px 60px -30px rgba(43,38,32,0.18);
+    --radius: 18px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:'Assistant', sans-serif; line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%; display:block;}
+  a{color:inherit; text-decoration:none;}
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
+  h1,h2,h3{font-family:'Rubik', sans-serif; font-weight:500; margin:0; color:var(--ink);}
+  .container{width:100%; max-width:1160px; margin:0 auto; padding:0 32px;}
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:10px;
+    font-size:14px; letter-spacing:.02em; color:var(--ocean-deep);
+    font-weight:600; margin-bottom:22px;
+  }
+  .eyebrow::before{content:""; width:28px; height:1px; background:currentColor; display:inline-block;}
+  section{position:relative;}
+
+  /* ===== Header ===== */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(250,246,240,0.92); backdrop-filter:blur(8px);
+    border-bottom:1px solid rgba(43,38,32,0.06);
+  }
+  .nav-row{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:16px 32px; max-width:1160px; margin:0 auto;}
+  .logo{font-family:'Rubik', sans-serif; font-size:28px; font-weight:600; color:var(--ocean-deep); line-height:1.15; display:flex; flex-direction:column; gap:2px;}
+  .logo span{font-family:'Assistant', sans-serif; font-size:15px; font-weight:500; color:var(--ink-faint);}
+  .brand{display:flex; align-items:center; gap:12px;}
+  .brand-mark{width:46px; height:46px; flex-shrink:0;}
+  .nav-links{display:flex; gap:28px; font-size:15px; font-weight:500; color:var(--ink-soft);}
+  .nav-links a:hover{color:var(--ocean-deep);}
+
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:10px;
+    padding:14px 30px; border-radius:999px; font-size:15px; font-weight:600;
+    cursor:pointer; border:none; transition:all .25s ease; white-space:nowrap;
+  }
+  .btn svg{width:18px; height:18px; flex-shrink:0;}
+  .btn-primary{background:var(--ocean-deep); color:var(--white); box-shadow:0 14px 30px -10px rgba(59,85,99,0.55);}
+  .btn-primary:hover{background:#2c424d; transform:translateY(-1px);}
+  .btn-primary svg{color:var(--wa);}
+  .btn-ghost{background:transparent; color:var(--ink); border:1px solid rgba(43,38,32,0.25);}
+  .btn-ghost:hover{border-color:var(--ink);}
+  .btn-sm{padding:11px 22px; font-size:14px;}
+  .btn-wa{background:#fff; color:#2c424d; padding:16px 32px; font-size:17px;}
+  .btn-wa:hover{transform:translateY(-1px); opacity:.94;}
+  .btn-wa svg{width:20px; height:20px; color:var(--wa);}
+
+  /* ===== Hero ===== */
+  .hero{padding:80px 0 0; overflow:hidden;}
+  .hero-grid{display:grid; grid-template-columns:1.1fr .9fr; gap:56px; align-items:center;}
+  .hero h1{font-size:50px; line-height:1.32; letter-spacing:-0.01em;}
+  .hero-sub{font-size:19px; color:var(--ink-soft); margin:28px 0 38px; max-width:540px; line-height:1.8;}
+  .hero-ctas{display:flex; gap:16px; flex-wrap:wrap;}
+  .hero-note{margin-top:18px; font-size:13.5px; color:var(--ink-faint);}
+  .hero-media{
+    position:relative; border-radius:28px; overflow:hidden; box-shadow:var(--shadow);
+    aspect-ratio:4/5; background:var(--cream);
+  }
+  .hero-media img{width:100%; height:100%; object-fit:cover; object-position:center 60%;}
+  .hero-media-tag{position:absolute; z-index:2; margin:0; bottom:26px; right:26px; left:26px; color:#fff; font-size:15px; line-height:1.6; text-align:center;}
+
+  /* ===== Strip ===== */
+  .strip{margin-top:110px; position:relative; height:340px; overflow:hidden;}
+  .strip img{width:100%; height:100%; object-fit:cover;}
+  .strip-overlay{
+    position:absolute; inset:0;
+    background:linear-gradient(180deg, rgba(30,38,43,0.45), rgba(30,38,43,0.62));
+    display:flex; align-items:center; justify-content:center; text-align:center; padding:0 24px;
+  }
+  .strip-overlay p{font-family:'Rubik', sans-serif; color:var(--white); font-size:30px; max-width:760px; line-height:1.6; margin:0;}
+
+  /* ===== Sections ===== */
+  .section{padding:84px 0;}
+  .section-head{max-width:760px; margin:0 0 44px;}
+  .section-head.center{margin:0 auto 44px; text-align:center;}
+  .section-head h2{font-size:36px; line-height:1.45;}
+  .section-head p{font-size:18px; color:var(--ink-soft); margin:18px 0 0;}
+  .bg-cream{background:var(--cream);}
+  .bg-ocean{background:var(--ocean-deep); color:var(--white);}
+  .bg-ocean h2{color:var(--white);}
+
+  /* when */
+  .feel-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
+  .feel-card{
+    background:var(--white); border-radius:var(--radius); padding:30px 28px;
+    border-right:3px solid var(--sand-deep);
+    box-shadow:0 20px 40px -28px rgba(43,38,32,0.18);
+  }
+  .feel-card h3{font-size:18px; font-weight:600; margin-bottom:8px;}
+  .feel-card p{margin:0; font-size:16px; color:var(--ink-soft); line-height:1.7;}
+  .card-link{display:inline-block; margin-top:14px; font-size:15px; font-weight:600; color:var(--ocean-deep); border-bottom:1px solid var(--sand-deep);}
+  .card-link:hover{color:var(--clay);}
+  .feel-foot{margin-top:44px; font-size:17px; color:var(--ink-soft); text-align:center;}
+
+  /* services */
+  .services{display:grid; grid-template-columns:1fr 1fr; gap:24px;}
+  .services.single{grid-template-columns:1fr; max-width:760px; margin:0 auto;}
+  .services.single h3{font-size:24px;}
+  .service{
+    background:var(--paper); border-radius:24px; padding:44px 40px;
+    border:1px solid var(--sand); display:flex; flex-direction:column;
+  }
+  .service .eyebrow{margin-bottom:14px;}
+  .service h3{font-size:28px; margin-bottom:16px;}
+  .service > p{font-size:17px; color:var(--ink-soft); margin:0 0 24px;}
+  .service ul{list-style:none; padding:0; margin:0; display:grid; gap:12px;}
+  .service li{display:flex; gap:12px; align-items:flex-start; font-size:16px; color:var(--ink);}
+  .service li::before{content:""; width:7px; height:7px; border-radius:50%; background:var(--clay); flex-shrink:0; margin-top:10px;}
+  .service-foot{margin-top:auto; padding-top:26px; font-size:14.5px; color:var(--ink-faint);}
+
+  /* relocation feature */
+  .relo{display:grid; grid-template-columns:1fr 1fr; border-radius:28px; overflow:hidden; background:var(--ocean-deep); color:var(--white); box-shadow:var(--shadow);}
+  .relo-media{min-height:420px;}
+  .relo-media img{width:100%; height:100%; object-fit:cover;}
+  .relo-text{padding:56px 52px; display:flex; flex-direction:column; justify-content:center;}
+  .relo-text .eyebrow{color:var(--ocean-pale);}
+  .relo-text h2{color:var(--white); font-size:34px; line-height:1.4; margin-bottom:18px;}
+  .relo-text h2 span{color:var(--sand);}
+  .relo-text p{font-size:17.5px; color:rgba(255,255,255,.85); margin:0 0 14px;}
+  .relo-list{list-style:none; padding:0; margin:6px 0 30px; display:grid; gap:8px;}
+  .relo-list li{display:flex; gap:10px; align-items:flex-start; font-size:16px; color:rgba(255,255,255,.9);}
+  .relo-list li::before{content:""; width:7px; height:7px; border-radius:50%; background:var(--sand-deep); flex-shrink:0; margin-top:10px;}
+  .relo-text .btn{align-self:flex-start; background:var(--white); color:var(--ocean-deep);}
+  .relo-text .btn:hover{background:var(--cream); transform:translateY(-1px);}
+  @media (max-width: 980px){
+    .relo{grid-template-columns:1fr;}
+    .relo-media{min-height:240px; height:260px;}
+    .relo-text{padding:36px 24px;}
+    .relo-text h2{font-size:27px;}
+    .relo-text .btn{align-self:stretch;}
+  }
+
+  /* lectures */
+  .lectures{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
+  .lecture{background:var(--white); border-radius:var(--radius); padding:32px 28px; box-shadow:0 20px 40px -28px rgba(43,38,32,0.18); display:flex; flex-direction:column;}
+  .lecture-num{font-size:13px; font-weight:700; color:var(--clay); letter-spacing:.04em; margin-bottom:12px;}
+  .lecture h3{font-size:21px; line-height:1.45; margin-bottom:12px;}
+  .lecture .lecture-sub{font-family:'Rubik', sans-serif; font-size:16.5px; color:var(--clay); margin:-4px 0 14px; line-height:1.5;}
+  .lecture p{font-size:16px; color:var(--ink-soft); margin:0 0 18px;}
+  .lecture-meta{margin-top:auto; font-size:14px; color:var(--ocean-deep); font-weight:600; line-height:1.6; padding-top:14px; border-top:1px solid var(--sand);}
+  @supports (grid-template-rows: subgrid){
+    .lecture{display:grid; grid-row:span 5; grid-template-rows:subgrid; row-gap:0;}
+    .lecture-meta{margin-top:0; align-self:start;}
+  }
+  .lectures-foot{text-align:center; margin-top:40px;}
+  .lectures-foot p{font-size:17px; color:var(--ink-soft); margin:0 0 20px;}
+
+  /* process */
+  .steps{display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:rgba(43,38,32,0.1); border-radius:var(--radius); overflow:hidden;}
+  .step{background:var(--paper); padding:36px 30px;}
+  .step-num{font-family:'Rubik', sans-serif; font-size:38px; font-weight:500; color:var(--sand-deep); line-height:1; margin-bottom:18px;}
+  .step h3{font-size:18px; font-weight:600; margin-bottom:8px;}
+  .step p{font-size:15.5px; color:var(--ink-soft); margin:0; line-height:1.7;}
+  .format-row{display:flex; flex-wrap:wrap; justify-content:center; gap:10px; margin-top:36px;}
+  .tag{font-size:14px; padding:8px 18px; border-radius:999px; background:var(--cream); color:var(--ocean-deep); font-weight:600;}
+
+  /* about */
+  .about-grid{display:grid; grid-template-columns:.8fr 1.2fr; gap:64px; align-items:center;}
+  .portrait{border-radius:28px; overflow:hidden; box-shadow:var(--shadow); aspect-ratio:4/5; max-width:400px; margin:0 auto;}
+  .portrait img{width:100%; height:100%; object-fit:cover; object-position:center 30%;}
+  .about-text h2{font-size:34px; margin-bottom:24px; line-height:1.45;}
+  .about-text p{font-size:18px; color:var(--ink-soft); margin:0 0 20px;}
+  .about-tags{display:flex; flex-wrap:wrap; gap:10px; margin-top:26px;}
+  .about-tags .tag{background:var(--white);}
+
+  /* belief */
+  .belief{max-width:820px; margin:0 auto; text-align:center;}
+  .belief blockquote{
+    margin:0; font-family:'Rubik', sans-serif; font-size:30px; line-height:1.6; color:var(--ocean-deep); font-weight:400;
+  }
+  .belief cite{display:block; margin-top:22px; font-style:normal; font-size:15px; color:var(--ink-faint);}
+
+  /* CTA */
+  .cta-wrap{max-width:640px; margin:0 auto; text-align:center;}
+  .cta-wrap .eyebrow{color:var(--ocean-pale); justify-content:center;}
+  .cta-wrap h2{font-size:36px; line-height:1.45;}
+  .cta-wrap p{font-size:18px; color:rgba(255,255,255,0.85); margin:22px 0 0;}
+  .cta-wrap .btn-wa{margin-top:36px;}
+  .cta-micro{font-size:14px !important; color:rgba(255,255,255,0.65) !important; margin-top:18px !important;}
+
+  /* FAQ */
+  .faq{max-width:760px; margin:0 auto;}
+  details{border-bottom:1px solid rgba(43,38,32,0.14); padding:26px 0;}
+  details:first-of-type{border-top:1px solid rgba(43,38,32,0.14);}
+  summary{display:flex; align-items:center; justify-content:space-between; cursor:pointer; list-style:none; font-size:19px; font-weight:600;}
+  summary::-webkit-details-marker{display:none;}
+  .plus{width:26px; height:26px; flex-shrink:0; position:relative; margin-inline-start:20px;}
+  .plus::before, .plus::after{content:""; position:absolute; background:var(--ocean-deep); transition:transform .25s ease;}
+  .plus::before{width:100%; height:2px; top:50%; right:0; transform:translateY(-50%);}
+  .plus::after{width:2px; height:100%; right:50%; top:0; transform:translateX(50%);}
+  details[open] .plus::after{transform:translateX(50%) scaleY(0);}
+  details p{margin:18px 0 0; font-size:16.5px; color:var(--ink-soft); max-width:680px;}
+
+  /* footer */
+  footer{padding:56px 0 40px; text-align:center; color:var(--ink-faint); font-size:13.5px;}
+  footer a{color:var(--ocean-deep); font-weight:600;}
+  .footer-logo{font-family:'Rubik', sans-serif; font-size:19px; color:var(--ocean-deep); margin-bottom:12px;}
+
+  /* floating WhatsApp (mobile) */
+  .wa-float{
+    position:fixed; bottom:18px; left:18px; z-index:60;
+    width:56px; height:56px; border-radius:50%; background:var(--wa); color:#fff;
+    display:none; align-items:center; justify-content:center;
+    box-shadow:0 12px 28px -8px rgba(0,0,0,.35);
+  }
+  .wa-float svg{width:28px; height:28px;}
+
+  .reveal{opacity:0; transform:translateY(18px); transition:opacity .7s ease, transform .7s ease;}
+  .reveal.in{opacity:1; transform:none;}
+  @media (prefers-reduced-motion: reduce){ .reveal{opacity:1; transform:none; transition:none;} }
+
+  @media (max-width: 980px){
+    .nav-links{display:none;}
+    .hero h1{font-size:38px;}
+    .hero-grid{grid-template-columns:1fr; gap:40px;}
+    .hero-media{aspect-ratio:16/10; order:-1;}
+    .feel-grid{grid-template-columns:1fr 1fr;}
+    .services{grid-template-columns:1fr;}
+    .lectures{grid-template-columns:1fr;}
+    .steps{grid-template-columns:1fr 1fr;}
+    .about-grid{grid-template-columns:1fr; gap:40px; text-align:center;}
+    .about-tags{justify-content:center;}
+    .section{padding:58px 0;}
+    .section-head h2, .about-text h2, .cta-wrap h2{font-size:28px;}
+    .belief blockquote{font-size:23px;}
+    .strip{height:240px; margin-top:70px;}
+    .strip-overlay p{font-size:22px;}
+  }
+  @media (max-width: 640px){
+    .container, .nav-row{padding-left:16px; padding-right:16px;}
+    .hero{padding-top:24px;}
+    .hero h1{font-size:32px;}
+    .hero-ctas{flex-direction:column; align-items:stretch;}
+    .hero-ctas .btn{width:100%;}
+    .feel-grid, .steps{grid-template-columns:1fr;}
+    .service{padding:32px 24px;}
+    .logo{font-size:22px;}
+    .logo span{font-size:13px;}
+    .brand{gap:8px;}
+    .brand-mark{width:36px; height:36px;}
+    .nav-row .btn-sm{padding:10px 16px; font-size:13px;}
+    .btn-wa{padding:15px 22px; font-size:16px; white-space:normal;}
+    .wa-float{display:flex;}
+  }
+</style>
+</head>
+<body>
+
+<!-- WhatsApp icon (reused) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path fill="currentColor" d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.532 5.862L.057 23.428a.75.75 0 0 0 .915.915l5.565-1.474A11.951 11.951 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.693-.523-5.222-1.432l-.374-.222-3.873 1.026 1.026-3.874-.221-.373A9.955 9.955 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></symbol>
+</svg>
+
+<header>
+  <div class="nav-row">
+    <a href="#top" class="brand"><img class="brand-mark" src="compass-mark.png" alt="" width="46" height="46"><span class="logo">דריה אליאס<span>אימון אישי</span></span></a>
+    <nav class="nav-links" aria-label="ניווט ראשי">
+      <a href="#services">אימון אישי</a>
+      <a href="#relocation">רילוקיישן</a>
+      <a href="#lectures">הרצאות</a>
+      <a href="#process">איך זה עובד</a>
+      <a href="#about">עליי</a>
+      <a href="#faq">שאלות</a>
+    </nav>
+    <a class="btn btn-primary btn-sm wa-link" href="https://wa.me/972542801725?text=%D7%94%D7%99%D7%99%20%D7%93%D7%A8%D7%99%D7%94%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%94%D7%90%D7%AA%D7%A8%20%D7%A9%D7%9C%D7%9A%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A7%D7%91%D7%95%D7%A2%20%D7%A9%D7%99%D7%97%D7%AA%20%D7%94%D7%99%D7%9B%D7%A8%D7%95%D7%AA" target="_blank" rel="noopener">לשיחת היכרות</a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="reveal">
+        <h1>לעצור.<br>לדייק.<br>ולנוע מתוך בחירה.</h1>
+        <p class="hero-sub">אימון אישי בתקופות של שינוי – בקריירה, בחיים ובכל מה שביניהם. ליווי אחד על אחד, עם הקשבה עמוקה וכלים מעשיים להתקדם.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary wa-link" href="https://wa.me/972542801725?text=%D7%94%D7%99%D7%99%20%D7%93%D7%A8%D7%99%D7%94%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%94%D7%90%D7%AA%D7%A8%20%D7%A9%D7%9C%D7%9A%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A7%D7%91%D7%95%D7%A2%20%D7%A9%D7%99%D7%97%D7%AA%20%D7%94%D7%99%D7%9B%D7%A8%D7%95%D7%AA" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wa-icon"/></svg>לתיאום שיחת היכרות</a>
+          <a href="#services" class="btn btn-ghost">איך עובדים יחד</a>
+        </div>
+        <p class="hero-note">שיחה קצרה בוואטסאפ או בזום, בלי עלות ובלי מחויבות.</p>
+      </div>
+      <div class="hero-media reveal">
+        <img src="the-path.jpg" alt="שביל בין עצי אלון ורקפות פורחות באביב">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STRIP ===== -->
+<div class="strip">
+  <img src="compass.jpg" alt="מצפן מונח על מפה באור שמש חם" loading="lazy">
+  <div class="strip-overlay">
+    <p class="reveal">לא צריך לדעת את כל הדרך.<br>מספיק לדעת מה הכיוון.</p>
+  </div>
+</div>
+
+<!-- ===== WHEN ===== -->
+<section class="section" id="when">
+  <div class="container">
+    <div class="section-head center reveal">
+      <h2>מתי זה הזמן לאימון?</h2>
+      <p>בדרך כלל ברגעים שבהם משהו כבר זז – או מבקש לזוז.</p>
+    </div>
+    <div class="feel-grid">
+      <div class="feel-card reveal"><h3>צומת בקריירה</h3><p>התפקיד הנוכחי כבר לא מספיק, ולא ברור מה הצעד הבא – קידום, הסבה או כיוון חדש לגמרי.</p></div>
+      <div class="feel-card reveal"><h3>תפקיד חדש, אחריות חדשה</h3><p>כניסה לניהול, צוות ראשון או תפקיד בכיר שמביא איתו אתגרים שאין להם תמיד הכנה מראש.</p></div>
+      <div class="feel-card reveal"><h3>חזרה אחרי הפסקה</h3><p>אחרי חופשת לידה, תקופה בבית או שנה אחרת – והרצון הוא לחזור לעשייה מתוך בחירה ולא מתוך לחץ.</p></div>
+      <div class="feel-card reveal"><h3>מעבר מדינה, או חזרה ממנה</h3><p>רילוקיישן מערער זהות, שגרה וקריירה. זה תחום שאני מכירה מקרוב – מבפנים.</p><a class="card-link" href="relocation.html">לליווי הייעודי לרילוקיישן ←</a></div>
+      <div class="feel-card reveal"><h3>החלטה גדולה</h3><p>יש כמה אפשרויות על השולחן, וקשה לבחור. צריך מקום שקט לחשוב בו בבהירות.</p></div>
+      <div class="feel-card reveal"><h3>תחושת תקיעות</h3><p>מבחוץ הכול נראה בסדר, אבל מבפנים משהו מבקש שינוי – וקשה לשים עליו את האצבע.</p></div>
+    </div>
+    <p class="feel-foot reveal">אם אחד מאלה נשמע מוכר – זו בדיוק נקודה טובה להתחיל ממנה.</p>
+  </div>
+</section>
+
+<!-- ===== COACHING ===== -->
+<section class="section bg-cream" id="services">
+  <div class="container">
+    <div class="section-head center reveal">
+      <div class="eyebrow">אימון אישי</div>
+      <h2>לדייק את הכיוון, ולדעת לאן ממשיכים</h2>
+      <p>תהליך אימון ממוקד שמחבר בין מה שחשוב לך באמת לבין צעדים מעשיים קדימה. אני לא נותנת תשובות – אני עוזרת לך למצוא את שלך.</p>
+    </div>
+    <div class="services single">
+      <article class="service reveal">
+        <h3>מה אפשר לקחת מהתהליך</h3>
+        <ul>
+          <li>בהירות לגבי כיוון אישי ומקצועי</li>
+          <li>קבלת החלטות מתוך בחירה ולא מתוך תגובה</li>
+          <li>חיבור מחדש לחוזקות, לערכים ולביטחון העצמי</li>
+          <li>ליווי בתקופות מעבר – כולל רילוקיישן וחזרה ממנו</li>
+        </ul>
+        <p class="service-foot">מתאים לרגעים של צומת, כשהמטרה היא לצאת ממנו עם כיוון.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== RELOCATION ===== -->
+<section class="section" id="relocation">
+  <div class="container">
+    <div class="relo reveal">
+      <div class="relo-media"><img src="LastBox.jpeg" alt="קופסת אריזה עם הכיתוב 'אישי' וצמח באור שמש חם בחדר ריק" loading="lazy"></div>
+      <div class="relo-text">
+        <div class="eyebrow">ליווי ייעודי</div>
+        <h2><span>מעבר</span> – אימון אישי<br>לנשים ברילוקיישן</h2>
+        <p>בדרך לרילוקיישן, כבר שם, או בדיוק חזרת? מעבר מדינה מערער זהות, קריירה ושייכות. בניתי ליווי אישי שמיועד בדיוק לתקופה הזו – מתוך ניסיון אישי, מבפנים.</p>
+        <ul class="relo-list">
+          <li>לבנות מחדש זהות וכיוון מקצועי</li>
+          <li>למצוא מקום גם לעצמך, לא רק למשפחה</li>
+          <li>ליצור שייכות ותחושת בית במקום החדש</li>
+        </ul>
+        <a class="btn" href="relocation.html">לכל הפרטים על מעבר ←</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== LECTURES ===== -->
+<section class="section" id="lectures">
+  <div class="container">
+    <div class="section-head center reveal">
+      <div class="eyebrow">הרצאות</div>
+      <h2>הרצאות לארגונים, קהילות וקבוצות</h2>
+      <p>הרצאות שמביאות את השאלות של שינוי, צמיחה ודיוק אישי אל הקבוצה – עם תובנות מהשטח וכלים שאפשר לקחת הביתה.</p>
+    </div>
+    <div class="lectures">
+      <article class="lecture reveal"><div class="lecture-num">הרצאה 01</div><h3>לנווט. לבדוק. לדייק.</h3><p class="lecture-sub">לחיות מתוך בחירה, לא רק מתוך מומנטום</p><p>במפגש אישי ומעורר מחשבה, דריה אליאס, מנהלת מוצר ומאמנת, מחברת בין חשיבה מעולם המוצר לבין החיים עצמם. דרך סיפורים והתבוננות היא תשתף כלים פרקטיים לזיהוי המצפן האישי, לבחינת המקום שבו נמצאים היום ולבחירה מודעת בדרך שבה רוצים להמשיך מכאן.</p><div class="lecture-meta">לארגונים, צוותים וקהילות, בהייטק ומחוצה לו – ולכל מי שרוצה לעצור ולבחון מחדש את הכיוון</div></article>
+      <article class="lecture reveal"><div class="lecture-num">הרצאה 02</div><h3>להמציא מתוך הקופסה</h3><p class="lecture-sub">חשיבה המצאתית שיטתית</p><p>חדשנות לא מתחילה בחשיבה מחוץ לקופסה, אלא דווקא במה שכבר נמצא בתוכה. הרצאה אינטראקטיבית שמנפצת מיתוסים על יצירתיות ומציגה מתודולוגיה פרקטית לייצור רעיונות חדשניים, פתרון בעיות וזיהוי הזדמנויות – בלי לחכות להשראה.</p><div class="lecture-meta">לצוותי מוצר, פיתוח וחדשנות, מנהלים, יזמים וכל מי שרוצה לחשוב אחרת ולייצר פתרונות חדשים</div></article>
+      <article class="lecture reveal"><div class="lecture-num">הרצאה 03</div><h3>המסע המופלא</h3><p class="lecture-sub">על חלומות, בחירות והאומץ לשנות כיוון</p><p>שנתיים של הפלגה משפחתית בקריביים, רחוק מהשגרה ומכל מה שמוכר. סיפור אישי על חלום שהפך למציאות, על החיים בים עם שלושה ילדים, על התמודדות עם אתגרים וחוסר ודאות, ועל התובנות שמגלים כשבוחרים לצאת להרפתקה.</p><div class="lecture-meta">לארגונים, צוותים וקהילות – ולכל מי שרוצה לעשות שינוי, לצאת מאזור הנוחות, או פשוט ליהנות מסיפור הרפתקאות אמיתי</div></article>
+    </div>
+    <div class="lectures-foot reveal">
+      <p>ההרצאות מותאמות לקהל ומתקיימות פרונטלית או בזום.</p>
+      <a class="btn btn-primary wa-link" href="https://wa.me/972542801725?text=%D7%94%D7%99%D7%99%20%D7%93%D7%A8%D7%99%D7%94%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A4%D7%A8%D7%98%D7%99%D7%9D%20%D7%A2%D7%9C%20%D7%94%D7%94%D7%A8%D7%A6%D7%90%D7%95%D7%AA%20%D7%A9%D7%9C%D7%9A" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wa-icon"/></svg>לפרטים והזמנת הרצאה</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROCESS ===== -->
+<section class="section" id="process">
+  <div class="container">
+    <div class="section-head center reveal">
+      <div class="eyebrow">איך זה עובד</div>
+      <h2>תהליך שבנוי סביבך</h2>
+    </div>
+    <div class="steps reveal">
+      <div class="step"><div class="step-num">01</div><h3>שיחת היכרות</h3><p>שיחה קצרה וללא עלות, כדי להבין את נקודת הפתיחה ולבדוק יחד אם זה מתאים.</p></div>
+      <div class="step"><div class="step-num">02</div><h3>מיפוי ומטרה</h3><p>הגדרה משותפת של מה חשוב לשנות, ואיך נדע שהגענו לשם.</p></div>
+      <div class="step"><div class="step-num">03</div><h3>מפגשים אישיים</h3><p>פגישות קבועות אחד על אחד, בקצב שלך, עם צעדים קטנים ומדויקים בין מפגש למפגש.</p></div>
+      <div class="step"><div class="step-num">04</div><h3>להמשיך הלאה</h3><p>בהירות, ביטחון וכלים שנשארים גם אחרי שהתהליך מסתיים.</p></div>
+    </div>
+    <div class="format-row reveal">
+      <span class="tag">אחד על אחד</span>
+      <span class="tag">אונליין, מכל מקום בעולם</span>
+      <span class="tag">בעברית או באנגלית</span>
+      <span class="tag">בקצב שלך</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section class="section bg-cream" id="about">
+  <div class="container about-grid">
+    <div class="reveal">
+      <div class="portrait"><img src="darya.jpg" alt="דריה אליאס, מאמנת אישית"></div>
+    </div>
+    <div class="about-text reveal">
+      <div class="eyebrow">נעים להכיר</div>
+      <h2>אני דריה. מעברים הם המקום שבו אני מרגישה בבית.</h2>
+      <p>במשך שנים בניתי קריירה בעולם הטכנולוגיה, וניהלתי מוצרים וצוותים בחברות גלובליות. אני מכירה מקרוב את הלחצים, ההחלטות והצמתים שמגיעים עם צמיחה מקצועית – וגם את הרגעים שבהם עולה השאלה: רגע, זה עדיין מה שאני רוצה?</p>
+      <p>את השאלות האלה שאלתי בעצמי לא מעט פעמים: במעבר לארצות הברית בעקבות הקריירה של בן זוגי, בהרפתקה משפחתית של כמעט שנתיים בקאריביים, ובחזרה לישראל. כל אחד מהמעברים האלה ערער משהו – וכל אחד מהם גם פתח אפשרות לבנות מחדש.</p>
+      <p>היום, לצד ייעוץ בניהול מוצר לחברות תוכנה, אני מלווה כמאמנת מוסמכת נשים וגברים בתהליכי שינוי, צמיחה ודיוק אישי. אני מביאה איתי הקשבה, סקרנות, ישירות – והרבה ניסיון מהשטח.</p>
+      <div class="about-tags">
+        <span class="tag">מאמנת מוסמכת</span>
+        <span class="tag">ניהול מוצר וצוותים</span>
+        <span class="tag">חברות טכנולוגיה גלובליות</span>
+        <span class="tag">רילוקיישן וחזרה</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BELIEF ===== -->
+<section class="section">
+  <div class="container belief reveal">
+    <blockquote>"מעברים גדולים, למרות הטלטלה שהם מביאים איתם, יכולים להפוך להזדמנות לעצור, לדייק ולבנות מחדש חיים שמתאימים למי שאנחנו היום."</blockquote>
+    <cite>דריה אליאס</cite>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="section bg-ocean" id="contact">
+  <div class="container cta-wrap">
+    <div class="eyebrow">הצעד הראשון</div>
+    <h2 class="reveal">בואו נתחיל בשיחה</h2>
+    <p class="reveal">אם משהו כאן נגע בך, אשמח להכיר. בשיחת היכרות קצרה נדבר על נקודת הפתיחה שלך היום ועל מה שחשוב לך לשנות – ונבדוק יחד אם התהליך מתאים לך.</p>
+    <a class="btn btn-wa wa-link reveal" href="https://wa.me/972542801725?text=%D7%94%D7%99%D7%99%20%D7%93%D7%A8%D7%99%D7%94%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%94%D7%90%D7%AA%D7%A8%20%D7%A9%D7%9C%D7%9A%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A7%D7%91%D7%95%D7%A2%20%D7%A9%D7%99%D7%97%D7%AA%20%D7%94%D7%99%D7%9B%D7%A8%D7%95%D7%AA" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wa-icon"/></svg>לכתוב לי בוואטסאפ</a>
+    <p class="cta-micro">בלי עלות ובלי מחויבות. אני עונה באופן אישי.</p>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="section" id="faq">
+  <div class="container">
+    <div class="section-head center reveal"><h2>שאלות שעולות הרבה</h2></div>
+    <div class="faq reveal">
+      <details>
+        <summary>מה קורה באימון?<span class="plus"></span></summary>
+        <p>באימון אין לי אגנדה משלי: אני שואלת, מקשיבה ומשקפת, והתשובות שלך הן שמובילות את הדרך. המטרה היא לצאת עם בהירות ועם צעדים מעשיים שמתאימים לך.</p>
+      </details>
+      <details>
+        <summary>צריך לדעת כבר מה אני רוצה?<span class="plus"></span></summary>
+        <p>ממש לא. רוב התהליכים מתחילים דווקא בלי תשובה ברורה – וזה בסדר גמור. בדיוק לשם כך התהליך קיים.</p>
+      </details>
+      <details>
+        <summary>איך נראות הפגישות?<span class="plus"></span></summary>
+        <p>פגישות אישיות אונליין, אחד על אחד, כך שאפשר להיפגש מכל מקום בעולם. את מבנה התהליך ואת התדירות נקבע יחד בשיחת ההיכרות.</p>
+      </details>
+      <details>
+        <summary>למי הליווי מתאים?<span class="plus"></span></summary>
+        <p>לנשים ולגברים כאחד, בכל שלב בקריירה ובחיים – בכל רגע שבו משהו מבקש שינוי.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <img src="compass-mark.png" alt="" width="40" height="40" style="margin:0 auto 10px; opacity:.85">
+    <div class="footer-logo">דריה אליאס</div>
+    <p>אימון אישי · אונליין, מכל מקום בעולם</p>
+    <p><a href="relocation.html">מעבר – ליווי ייעודי לרילוקיישן</a></p>
+    <p><a href="mailto:darya@datayoga.io">darya@datayoga.io</a></p>
+    <p>© 2026 דריה אליאס. כל הזכויות שמורות.</p>
+  </div>
+</footer>
+
+<a class="wa-float wa-link" href="https://wa.me/972542801725?text=%D7%94%D7%99%D7%99%20%D7%93%D7%A8%D7%99%D7%94%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%94%D7%90%D7%AA%D7%A8%20%D7%A9%D7%9C%D7%9A%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A7%D7%91%D7%95%D7%A2%20%D7%A9%D7%99%D7%97%D7%AA%20%D7%94%D7%99%D7%9B%D7%A8%D7%95%D7%AA" target="_blank" rel="noopener" aria-label="שיחה בוואטסאפ"><svg aria-hidden="true"><use href="#wa-icon"/></svg></a>
+
+<script>
+  // Reveal on scroll
+  (function(){
+    var els = document.querySelectorAll('.reveal');
+    if(!('IntersectionObserver' in window)){ els.forEach(function(e){ e.classList.add('in'); }); return; }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){ entry.target.classList.add('in'); io.unobserve(entry.target); }
+      });
+    }, { threshold: 0.12 });
+    els.forEach(function(e){ io.observe(e); });
+  })();
+</script>
+</body>
+</html>
